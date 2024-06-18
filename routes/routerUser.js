@@ -1,9 +1,9 @@
 const router = require('express').Router();
 const { getData } = require('../utils/utils');
 
-router.get('/check-data', (req, res) => {
+router.get('/check-data',  async (req, res) => {
     // json
-    const dataCheck = getData();
+    const dataCheck = await getData();
 
     return res.status(200).json({
         success: true,
